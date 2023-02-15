@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Arial-MT";
+  src: url("/src/assets/fonts/Arial-MT.woff");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 480px;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Arial", Verdana, sans-serif;
+  color: #fff;
+  text-align: center;
+  background: url("../assets/img/bg.jpg") center/cover, rgba(0, 0, 0, 0.5);
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
