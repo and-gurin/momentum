@@ -41,8 +41,11 @@ function getTimeOfDay() {
 function setBg() {
     let bgNum = String(randomNum).padStart(2, "0");
     let timeOfDay = getTimeOfDay();
-    let bgLinc = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`
-    body.style.backgroundImage = `url(${bgLinc})`
+    let img = new Image();
+    img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`
+    img.onload = ()=> {
+        body.style.backgroundImage = `url(${img.src})`
+    } 
 }
 
 setBg();
