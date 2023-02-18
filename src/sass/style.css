@@ -665,6 +665,19 @@ body {
   height: 30vh;
 }
 
+.city {
+  width: 170px;
+  height: 34px;
+  padding: 5px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+}
+
 .weather {
   text-align: left;
   display: flex;
