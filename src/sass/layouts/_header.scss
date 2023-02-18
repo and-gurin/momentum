@@ -1,4 +1,32 @@
 .header__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    height: 30vh;
+}
+
+.weather {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.description-container {
+    display: flex;
+    //flex-wrap: wrap;
+    column-gap: 12px;
+}
+
+.city {
+    display: block;
+    
+}
+
+.weather-icon {
+    font-size: 44px;
+}
+
+.weather__temperature:after {
+    content: ' \2103';
 }
