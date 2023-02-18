@@ -653,6 +653,11 @@ body {
   content: "\ee22";
 }
 
+.wrapper {
+  padding: 20px;
+  width: 100%;
+}
+
 .header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -684,9 +689,33 @@ body {
   content: " ℃";
 }
 
-.wrapper {
-  padding: 20px;
-  width: 100%;
+.quotes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 30vh;
+  align-items: center;
+}
+
+.qoutes-icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../assets/svg/reload.svg");
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.quote {
+  min-height: 32px;
+}
+
+.author {
+  min-height: 20px;
 }
 
 .main {

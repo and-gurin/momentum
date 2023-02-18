@@ -10,7 +10,6 @@ async function getWeather(city) {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&appid=f793b145b04b72ffdfd775747be4fac1&units=metric`;
     const res = await fetch(url);
     const data = await res.json(); 
-    console.log(data.weather[0].id, data.weather[0].description, data.main.temp, data.name);
 
     weatherIcon.classList.add(`owf-${data.weather[0].id}`);
     temperature.textContent = `${Math.round(data.main.temp)}`;

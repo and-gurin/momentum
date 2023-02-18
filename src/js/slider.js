@@ -5,8 +5,8 @@ let randomNum;
 
 
 function getRandomNum(max) {
-    randomNum = Math.floor(Math.random() * max);
-  return randomNum === 0 ? randomNum : randomNum
+    return randomNum = Math.floor(Math.random() * max + 1);
+  
 }
 
 getRandomNum(20);

@@ -1,9 +1,9 @@
 const quote = document.querySelector('.quote');
-const author = document.querySelector('.author')
-console.log(quote, author)
+const author = document.querySelector('.author');
+const quotesIcon = document.querySelector('.qoutes-icon')
 
-function getRandomNum(max) {
-   let randomNum = Math.floor(Math.random() * max);
+function getRandomNum() {
+   let randomNum = Math.floor(Math.random()*99 + 1);
   return randomNum === 0 ? randomNum : randomNum
 }
 
@@ -11,9 +11,11 @@ async function getQuote () {
     const url = 'https://type.fit/api/quotes';
     const res = await fetch(url);
     const data = await res.json();
-    const randomQoute = getRandomNum(100);
+    const randomQoute = getRandomNum();
     quote.textContent = data[randomQoute].text;
     author.textContent = data[randomQoute].author;
 }
+
+quotesIcon.addEventListener('click', getQuote)
 
 getQuote();
