@@ -11,12 +11,6 @@
 }
 
 .icon-slider {
-    display: block;
-    width: 32px;
-    height: 32px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
     top: 50%;
     margin-top: -16px;
@@ -73,9 +67,8 @@
     background-color: transparent;
     border: 0;
     outline: 0;
-}
-
-.name::placeholder {
-    color: #fff;
-    opacity: .6;
+    &::placeholder {
+        color: #fff;
+        opacity: .6;
+    }
 }

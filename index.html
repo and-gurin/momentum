@@ -11,17 +11,15 @@
     <header class="header">
         <div class="wrapper header__wrapper">
             <div class="audio-player">
-                <div class="audio-player__buttons">
-                    <button class="button button_prew-track"></button>
-                    <button class="button button_play"></button>
-                    <button class="button button_next-track"></button>
+                <div class="audio-player__controls">
+                    <span class="icon icon_prew-track"></span>
+                    <span class="icon icon_play"></span>
+                    <span class="icon icon_next-track"></span>
                 </div>
-                <ul class="audio-player__playlist">
-                    <!-- <li class="track-1"></li> -->
-                </ul>
+                <ul class="audio-player__playlist"></ul>
             </div>
             <div class="weather">
-                <input type="text" class="city">
+                <input type="text" placeholder="Minsk" class="city">
                 <span class="weather-icon owf"></span>
                 <div class="weather">
                     <div class="description-container">
@@ -35,9 +33,9 @@
         </div>
     </header>
     <main class="main">
-            <div class="slider">
-            <span class="icon-slider icon-slider_prew"></span>
-            <span class="icon-slider icon-slider_next"></span>
+        <div class="slider">
+            <span class="icon icon-slider icon-slider_prew"></span>
+            <span class="icon icon-slider icon-slider_next"></span>
         </div>
         <div class="time">
             <div class="time__clock"></div>
@@ -51,7 +49,7 @@
     <footer class="footer">
         <div class="wrapper footer__wrapper">
             <div class="quotes">
-                <span class="qoutes-icon"></span>
+                <span class="icon qoutes-icon"></span>
                 <q class="quote"></q>
                 <cite class="author"></cite>
             </div>
@@ -63,5 +61,6 @@
     <script src="./src/js/slider.js" type="module"></script>
     <script src="./src/js/weather.js" type="module"></script>
     <script src="./src/js/quote.js" type="module"></script>
+    <script src="./src/js/audio-player.js" type="module"></script>
 </body>
 </html>

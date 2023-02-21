@@ -23,6 +23,29 @@ body {
   text-align: center;
 }
 
+.icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-size: 32px 32px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.icon:hover {
+  opacity: 1;
+}
+.icon:active {
+  border: 0;
+  outline: 0;
+  transform: scale(1.1);
+}
+
 /*!
  *  owfont-regular 1.0.0 by Deniz Fuchidzhiev - http://websygen.com
  *  License - font: SIL OFL 1.1, css: MIT License
@@ -665,17 +688,32 @@ body {
   height: 30vh;
 }
 
-.city {
-  width: 170px;
-  height: 34px;
-  padding: 5px;
-  font-size: 20px;
-  line-height: 24px;
-  color: #fff;
-  border: 0;
-  outline: 0;
-  border-bottom: 1px solid #fff;
-  background-color: transparent;
+.audio-player__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  height: 50px;
+  margin-bottom: 28px;
+}
+
+.icon_play {
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+  background-image: url(../assets/svg/play.svg);
+}
+
+.pause {
+  background-image: url(../assets/svg/pause.svg);
+}
+
+.icon_prew-track {
+  background-image: url(../assets/svg/play-prev.svg);
+}
+
+.icon_next-track {
+  background-image: url("../assets/svg/play-next.svg");
 }
 
 .weather {
@@ -690,16 +728,32 @@ body {
   column-gap: 12px;
 }
 
-.city {
-  display: block;
-}
-
 .weather-icon {
   font-size: 44px;
 }
 
 .weather__temperature:after {
   content: " ℃";
+}
+
+.city {
+  display: block;
+  font-family: inherit;
+  width: 170px;
+  height: 34px;
+  padding: 5px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.city::placeholder {
+  color: #fff;
+  opacity: 0.6;
 }
 
 .quotes {
@@ -744,12 +798,6 @@ body {
 }
 
 .icon-slider {
-  display: block;
-  width: 32px;
-  height: 32px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: absolute;
   top: 50%;
   margin-top: -16px;
@@ -807,7 +855,6 @@ body {
   border: 0;
   outline: 0;
 }
-
 .name::placeholder {
   color: #fff;
   opacity: 0.6;
