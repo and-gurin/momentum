@@ -38,7 +38,7 @@ function getTimeOfDay() {
     Math.floor(hours / 6) < 4 ? `${dayHours[0]}`: null
 }
 
-function setBg() {
+export function setBg() {
     let bgNum = String(randomNum).padStart(2, "0");
     let timeOfDay = getTimeOfDay();
     let img = new Image();
@@ -48,4 +48,3 @@ function setBg() {
     } 
 }
 
-setBg();

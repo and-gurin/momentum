@@ -5,7 +5,7 @@ const wind = document.querySelector('.weater__wind');
 const humidity = document.querySelector('.weather__humidity');
 const city = document.querySelector('.city');
 
-async function getWeather(city) {  
+export async function getWeather(city) {  
     weatherIcon.className = 'weather-icon owf';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&appid=f793b145b04b72ffdfd775747be4fac1&units=metric`;
     const res = await fetch(url);
@@ -17,7 +17,6 @@ async function getWeather(city) {
     wind.textContent = `скорость ветра: ${data.wind.speed} м/c`;
     humidity.textContent = `влажность: ${data.main.humidity} %`;
 }
-getWeather('Минск')
 
 city.addEventListener('change', ()=>{
     getWeather(city.value)

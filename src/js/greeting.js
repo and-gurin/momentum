@@ -1,6 +1,6 @@
 const greeting = document.querySelector('.greeting__welcome');
 
-function showGreeting () {
+export function showGreeting () {
     greeting.textContent = getTimeOfDay();
     setTimeout(showGreeting, 1000*60);
 }
@@ -28,5 +28,3 @@ function getLocalStorage() {
   }
 }
 window.addEventListener('load', getLocalStorage)
-
-showGreeting()
