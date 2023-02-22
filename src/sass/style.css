@@ -716,6 +716,36 @@ body {
   background-image: url("../assets/svg/play-next.svg");
 }
 
+.audio-player__playlist {
+  text-align: left;
+}
+
+.play-item {
+  position: relative;
+  padding: 3px;
+  padding-left: 20px;
+  list-style: none;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.play-item:hover {
+  opacity: 1;
+}
+
+.play-item::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-weight: 900;
+}
+
+.item-active::before {
+  color: #C5B358;
+}
+
 .weather {
   text-align: left;
   display: flex;

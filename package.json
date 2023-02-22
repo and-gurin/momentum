@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/and-gurin/momentum/issues"
   },
-  "homepage": "https://github.com/and-gurin/momentum#readme"
+  "homepage": "https://github.com/and-gurin/momentum#readme",
+  "devDependencies": {
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
+  }
 }
