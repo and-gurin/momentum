@@ -12,10 +12,38 @@
     <header class="header">
         <div class="wrapper header__wrapper">
             <div class="audio-player">
-                <div class="audio-player__controls">
+                <div class="audio-player-controls__wrapper">
+                    <div class="audio-player-controls">
                     <span class="icon icon_prew-track"></span>
                     <span class="icon icon_play"></span>
                     <span class="icon icon_next-track"></span>
+                    </div>
+                    <div class="audio-player-progress">
+                        <input 
+                        type="range" 
+                        id="progress-bar"
+                        step="0.1" 
+                        min="0" 
+                        max="" 
+                        value="0" 
+                        />
+                        <div class="audio-player-audio-volume">
+                            <div class="audio-player-time">
+                                <span class="currentTime"></span>
+                                <span>/</span>
+                                <span class="durationTime"></span>
+                            </div>
+                            <div class="volume-container">
+                                <div class="volume-button">
+                                    <div class="volume icono-volumeMedium"></div>
+                                </div>
+                                <div class="volume-slider">
+                                    <div class="volume-percentage"></div>
+                                </div>
+                            </div>
+                            
+                        </div>   
+                    </div>
                 </div>
                 <ul class="audio-player__playlist"></ul>
             </div>
