@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const FileManagerPlugin = require('filemanager-webpack-plugin');
+
 
 module.exports = {
   entry: './src/index.js',
@@ -41,6 +43,21 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'index.html'),
       filename: 'index.html',
+    }),
+    new FileManagerPlugin({
+      events: {
+       onStart: {
+         delete: ['dist'],
+       },
+       onEnd: {
+           copy: [
+             {
+               source: path.join('src', 'assets', 'sounds'),
+               destination: 'dist',
+             },
+           ],
+         },
+      },
     }),
   ],
 };
