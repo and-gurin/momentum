@@ -30,12 +30,15 @@ function setLocalStorage() {
     localStorage.setItem('city', city.value);
 }
 
+function getLocalStorage () {
+    localStorage.getItem('city')
+}
+
 window.addEventListener('beforeunload', setLocalStorage);
 
-const getCityFromLocalStorage = () => city.value = !localStorage.getItem('city') ? 'Minsk' : localStorage.getItem('city');
+city.value = localStorage.getItem('city') ? localStorage.getItem('city') : 'Minsk'
 
-
-window.addEventListener('load', getCityFromLocalStorage)
+window.addEventListener('load', getLocalStorage)
 
 city.addEventListener('change', (e)=>{
     getWeather(city.value);
