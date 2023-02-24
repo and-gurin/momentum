@@ -1,15 +1,14 @@
-import { showTime, showDate } from "./js/clock.js";
-import { playAudioClickHandler } from "./js/audio-player.js";
-import { showGreeting } from "./js/greeting.js";
-import { getQuote } from "./js/quote.js";
-import { setBg } from "./js/slider.js";
-import { getWeather } from "./js/weather.js";
-import { progressBarHandler } from "./js/audio-player-progress.js";
+import { showTime, showDate } from './js/clock.js';
+import { playAudioClickHandler } from './js/audio-player.js';
+import { showGreeting } from './js/greeting.js';
+import { getQuote } from './js/quote.js';
+import { setBg } from './js/slider.js';
+import { getWeather } from './js/weather.js';
+import { progressBarHandler } from './js/audio-player-progress.js';
 import "./sass/style.scss";
 
 
 window.onload = function () {
-    console.log('Hello AG')
 
     //audio
     playAudioClickHandler();

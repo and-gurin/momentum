@@ -1,4 +1,4 @@
-import playList from "./play-list.js"
+import playList from './play-list.js'
 
 const playButton = document.querySelector('.icon_play');
 const playPrewButton = document.querySelector('.icon_prew-track');

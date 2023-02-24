@@ -1,9 +1,14 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = {
+  watch: true,
+   watchOptions: {
+    aggregateTimeout: 600,
+  },
   entry: './src/index.js',
   output: {
     filename: 'main.js',
@@ -13,13 +18,9 @@ module.exports = {
   module: {
   rules: [
     {
-       test: /\.txt/,
-       type: 'asset',
-      },
-    {
         test: /\.s[ac]ss$/i,
         use: [
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           "css-loader",
           "sass-loader",
         ],
@@ -59,5 +60,8 @@ module.exports = {
          },
       },
     }),
+    new MiniCssExtractPlugin({
+       filename: '[name].[contenthash].css',
+     }),
   ],
 };
