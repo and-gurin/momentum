@@ -5,7 +5,7 @@ import { getQuote } from './js/quote.js';
 import { setBg } from './js/slider.js';
 import { getWeather } from './js/weather.js';
 import { progressBarHandler } from './js/audio-player-progress.js';
-import "./sass/style.scss";
+import './sass/style.scss';
 
 
 window.onload = function () {
