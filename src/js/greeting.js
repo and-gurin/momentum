@@ -17,9 +17,9 @@ function getTimeOfDay() {
 const input = document.querySelector('.name')
 
 function setLocalStorage() {
-
     localStorage.setItem('name', input.value);
 }
+
 window.addEventListener('beforeunload', setLocalStorage)
 
 function getLocalStorage() {

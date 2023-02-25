@@ -688,13 +688,19 @@ body {
   height: 30vh;
 }
 
-.audio-player__controls {
+.audio-player-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.audio-player-controls__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 120px;
   height: 50px;
-  margin-bottom: 28px;
+  margin-bottom: 8px;
 }
 
 .icon_play {
@@ -714,6 +720,50 @@ body {
 
 .icon_next-track {
   background-image: url("../assets/svg/play-next.svg");
+}
+
+.audio-player-audio-volume {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.volume-container {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.volume-container:hover .volume-slider {
+  left: -123px;
+  width: 120px;
+}
+
+.volume-button {
+  height: 26px;
+  display: flex;
+  align-items: center;
+}
+
+.volume {
+  transform: scale(0.7);
+}
+
+.volume-slider {
+  position: absolute;
+  left: -3px;
+  top: 5px;
+  z-index: -1;
+  width: 0;
+  height: 15px;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6666666667);
+  transition: 0.25s;
+}
+
+.volume-percentage {
+  background: coral;
+  height: 100%;
+  width: 75%;
 }
 
 .audio-player__playlist {
@@ -746,6 +796,40 @@ body {
   color: #C5B358;
 }
 
+input[type=range] {
+  width: 250px;
+  appearance: none;
+  outline: none;
+  overflow: hidden;
+  height: 10px;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  height: 10px;
+  background-color: blue;
+}
+input[type=range]::-webkit-slider-thumb {
+  background: #ecf0f1;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  -webkit-appearance: none;
+  margin-top: -4px;
+  box-shadow: -200px 0 0 200px #43e5f7;
+}
+input[type=range]::-moz-range-track {
+  height: 7px;
+  background-color: blue;
+}
+input[type=range]::-moz-range-thumb {
+  background: #ecf0f1;
+  cursor: pointer;
+  height: 7px;
+  border-radius: 0px;
+  box-shadow: -200px 0px 0px 200px #43e5f7;
+  padding: 0px;
+  margin: 0px;
+}
+
 .weather {
   text-align: left;
   display: flex;
@@ -760,10 +844,6 @@ body {
 
 .weather-icon {
   font-size: 44px;
-}
-
-.weather__temperature:after {
-  content: " ℃";
 }
 
 .city {

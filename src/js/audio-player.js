@@ -1,11 +1,11 @@
-import playList from "./play-list.js"
+import playList from './play-list.js'
 
 const playButton = document.querySelector('.icon_play');
 const playPrewButton = document.querySelector('.icon_prew-track');
 const playNextButton = document.querySelector('.icon_next-track');
 const playListContainer = document.querySelector('.audio-player__playlist');
 let isPlay = true;
-const audio = new Audio(playList[0].src);
+export const audio = new Audio(playList[0].src);
 let playNum = 0;
 
 export function playAudioClickHandler () {
@@ -63,4 +63,3 @@ function playAudio () {
 }
 
 audio.addEventListener('ended', playNextTrack);
-
