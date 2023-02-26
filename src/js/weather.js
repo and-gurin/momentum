@@ -1,3 +1,5 @@
+import { weather } from './translation.js';
+
 const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.weather__temperature');
 const weatherDescription = document.querySelector('.weather__description');
@@ -5,9 +7,9 @@ const wind = document.querySelector('.weater__wind');
 const humidity = document.querySelector('.weather__humidity');
 const city = document.querySelector('.city');
 
-export async function getWeather(city) {  
+export async function getWeather(lang, city = localStorage.getItem('city') ? localStorage.getItem('city') : 'Minsk') {  
     weatherIcon.className = 'weather-icon owf';
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&appid=f793b145b04b72ffdfd775747be4fac1&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${lang}&appid=f793b145b04b72ffdfd775747be4fac1&units=metric`;
     try {
         const res = await fetch(url);
         const data = await res.json(); 
@@ -15,8 +17,8 @@ export async function getWeather(city) {
         weatherIcon.classList.add(`owf-${data.weather[0].id}`);
         temperature.textContent = `${Math.round(data.main.temp)} °C`;
         weatherDescription.textContent = `${data.weather[0].description}`;
-        wind.textContent = `скорость ветра: ${Math.round(data.wind.speed)} м/c`;
-        humidity.textContent = `влажность: ${data.main.humidity} %`;
+        wind.textContent = `${weather[lang].wind}: ${Math.round(data.wind.speed)} ${weather[lang].wind_units}`;
+        humidity.textContent = `${weather[lang].humidity}: ${data.main.humidity} %`;
     } catch {
         temperature.textContent = '';
         wind.textContent = '';

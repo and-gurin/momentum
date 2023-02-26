@@ -1,16 +1,18 @@
+import { quotes } from "./translation";
+
 const quote = document.querySelector('.quote');
 const author = document.querySelector('.author');
-const quotesIcon = document.querySelector('.qoutes-icon')
+const quotesIcon = document.querySelector('.qoutes-icon');
 
-function getRandomNum() {
-   let randomNum = Math.floor(Math.random()*99 + 1);
+export async function getQuote (lang) {
+    const res = await fetch(quotes[lang]);
+    console.log(res)
+    const data = await res.json();
+    
+    function getRandomNum() {
+   let randomNum = Math.floor(Math.random()*15 + 1);
   return randomNum === 0 ? randomNum : randomNum
 }
-
-export async function getQuote () {
-    const url = 'https://type.fit/api/quotes';
-    const res = await fetch(url);
-    const data = await res.json();
     const randomQoute = getRandomNum();
     quote.textContent = data[randomQoute].text;
     author.textContent = data[randomQoute].author;

@@ -18,6 +18,22 @@ module.exports = {
   module: {
   rules: [
     {
+        test: /\.(?:ico|gif|png|jpg|jpeg|svg|webp)$/i,
+        type: 'asset/resource',
+      },
+      {
+    test: /\.(?:json)$/i,
+    type: 'asset/resource',
+      },
+      {
+        test: /\.(?:mp3|wav|ogg|mp4)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(woff(2)?|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
+    {
         test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
@@ -53,7 +69,7 @@ module.exports = {
        onEnd: {
            copy: [
              {
-               source: path.join('src', 'assets', 'sounds'),
+              source: path.join('src', 'assets', 'sounds'),
                destination: 'dist',
              },
            ],
