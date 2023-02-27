@@ -25,7 +25,6 @@ export async function getWeather(lang, city = localStorage.getItem('city') ? loc
         humidity.textContent = '';
         weatherDescription.textContent = 'Data loading error. Enter the city again';
     }
-    
 }
 
 function setLocalStorage() {
