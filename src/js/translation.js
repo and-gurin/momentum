@@ -108,5 +108,5 @@ window.addEventListener('beforeunload', localStorage.setItem('language', languag
 
 language.value = getFromLocalStorage || 'en';
 
-window.addEventListener('load', ()=>getFromLocalStorage);
+window.addEventListener('load', () => getFromLocalStorage);
 

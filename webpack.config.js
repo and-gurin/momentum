@@ -10,7 +10,7 @@ module.exports = {
   },
   entry: ['./src/index.js', './src/sass/style.scss'],
   output: {
-    path: path.join(__dirname, '/dist'),
+    path: path.join(__dirname, '/distrib'),
     filename: 'index.js',
   },
   module: {
@@ -62,13 +62,13 @@ module.exports = {
     new FileManagerPlugin({
       events: {
        onStart: {
-         delete: ['dist'],
+         delete: ['distrib'],
        },
        onEnd: {
            copy: [
              {
               source: path.join('src', 'assets', 'sounds'),
-               destination: 'dist',
+               destination: 'distrib',
              },
            ],
          },
