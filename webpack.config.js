@@ -3,21 +3,15 @@ const path = require('path');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-
 module.exports = {
-  mode: development ? 'development' : 'production',
-  devtool: development ? 'inline-source-map' : false,
   watch: true,
   watchOptions: {
     aggregateTimeout: 600,
   },
-  entry: './src/index.js',
-  context: path.resolve(__dirname, 'src'),
+  entry: ['./src/index.js', './src/sass/style.scss'],
   output: {
-    publicPath: '/',
-    filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: '[file]',
+    path: path.join(__dirname, '/dist'),
+    filename: 'index.js',
   },
   module: {
   rules: [
@@ -79,19 +73,6 @@ module.exports = {
            ],
          },
       },
-    }),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: '**/*',
-          context: path.resolve(__dirname, './src'),
-          globOptions: {
-              ignore: ['**/*.js', '**/*.ts', '**/*.scss', '**/*.sass', '**/*.html'],
-          },
-          noErrorOnMissing: true,
-          force: true,
-        },
-      ],
     }),
     new MiniCssExtractPlugin({
        filename: '[name].[contenthash].css',
