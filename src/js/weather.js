@@ -1,4 +1,4 @@
-import { weather } from './translation.js';
+import { weather, lang } from './translation.js';
 
 const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.weather__temperature');
@@ -43,6 +43,6 @@ city.value = localStorage.getItem('city') ? localStorage.getItem('city') : 'Mins
 window.addEventListener('load', getLocalStorage)
 
 city.addEventListener('change', (e)=>{
-    getWeather(city.value);
+    getWeather(lang, city.value);
     localStorage.setItem('city', e.target.value)
 })

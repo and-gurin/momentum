@@ -1,4 +1,4 @@
-import { quotes } from "./translation";
+import { quotes, lang } from './translation.js';
 
 const quote = document.querySelector('.quote');
 const author = document.querySelector('.author');
@@ -18,4 +18,4 @@ export async function getQuote (lang) {
     author.textContent = data[randomQoute].author;
 }
 
-quotesIcon.addEventListener('click', getQuote)
+quotesIcon.addEventListener('click', ()=>getQuote(lang))

@@ -1,7 +1,7 @@
 import { setSettingsData } from './settings.js';
 import { getQuote } from './quote.js';
 import { getWeather } from './weather.js'
-import { showDate, showTime, timer } from './clock.js';
+import { showTime, timer } from './clock.js';
 
 export const weather = {
   'en': {
@@ -87,8 +87,9 @@ export const greeting = {
 };
 
 const language = document.querySelector('.language');
+const getFromLocalStorage = localStorage.getItem('language');
 
-export const lang = (localStorage.getItem('language') && languages.includes(getLocalStorage('language'))) ? localStorage.getItem('language') : languages[1];
+export const lang = (getFromLocalStorage && languages.includes(getFromLocalStorage)) ? getFromLocalStorage : languages[1];
 
 
 export const changeLanguage = () => {
@@ -97,24 +98,15 @@ export const changeLanguage = () => {
     localStorage.setItem('language', language.value)
     getQuote(language.value);
     clearTimeout(timer);
-    //showDate(language.value);
     showTime(language.value);
     getWeather(language.value);
     setSettingsData(language.value);
   })
 };
 
-function setLocalStorage() {
-    localStorage.setItem('language', language.value);
-}
+window.addEventListener('beforeunload', localStorage.setItem('language', language.value));
 
-function getLocalStorage () {
-    localStorage.getItem('language')
-}
+language.value = getFromLocalStorage || 'en';
 
-window.addEventListener('beforeunload', setLocalStorage);
-
-language.value = getLocalStorage('language') || 'en';
-
-window.addEventListener('load', getLocalStorage);
+window.addEventListener('load', ()=>getFromLocalStorage);
 

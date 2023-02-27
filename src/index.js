@@ -5,7 +5,7 @@ import { getQuote } from './js/quote.js';
 import { setBg } from './js/slider.js';
 import { getWeather } from './js/weather.js';
 import { progressBarHandler } from './js/audio-player-progress.js';
-import { openCloseSettings, showHideElements } from './js/settings.js';
+import { openCloseSettings, setUpEventListenersForSettings } from './js/settings.js';
 import { changeLanguage, lang } from './js/translation.js';
 import './sass/style.scss';
 
@@ -36,7 +36,7 @@ window.onload = function () {
 
     //settings
     openCloseSettings();
-    showHideElements();
+    setUpEventListenersForSettings();
 
     //language
     changeLanguage();
