@@ -1,3 +1,4 @@
+
 const greeting = document.querySelector('.greeting__welcome');
 
 export function showGreeting () {

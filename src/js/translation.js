@@ -46,7 +46,7 @@ export const setting = {
     'elements-weather': 'погода',
     'elements-greeting': 'приветствие',
     'elements-quotes': 'цитаты',
-    'elements-audio': 'плеер',
+    'elements-audio-player': 'плеер',
     'elements-todo': 'список дел',
   },
   'en': {
@@ -86,27 +86,27 @@ export const greeting = {
   'ru': ['Доброй ночи,', 'Доброе утро,', 'Добрый день,', 'Добрый вечер,']
 };
 
-const language = document.querySelector('.language');
-const getFromLocalStorage = localStorage.getItem('language');
+const language = document.querySelector('.select-group__select-language');
+const languageFromLocalStorage = localStorage.getItem('language');
 
-export const lang = (getFromLocalStorage && languages.includes(getFromLocalStorage)) ? getFromLocalStorage : languages[1];
+export const lang = (languageFromLocalStorage && languages.includes(languageFromLocalStorage)) ? languageFromLocalStorage : languages[1];
 
 
 export const changeLanguage = () => {
   setSettingsData(language.value);
-  language.addEventListener('change', () => {
-    localStorage.setItem('language', language.value)
-    getQuote(language.value);
+  language.addEventListener('change', (event) => {
+    localStorage.setItem('language', event.target.value)
+    getQuote(event.target.value);
     clearTimeout(timer);
-    showTime(language.value);
-    getWeather(language.value);
-    setSettingsData(language.value);
+    showTime(event.target.value);
+    getWeather(event.target.value);
+    setSettingsData(event.target.value);
   })
 };
 
 window.addEventListener('beforeunload', localStorage.setItem('language', language.value));
 
-language.value = getFromLocalStorage || 'en';
+language.value = languageFromLocalStorage || 'en';
 
-window.addEventListener('load', () => getFromLocalStorage);
+window.addEventListener('load', () => languageFromLocalStorage);
 

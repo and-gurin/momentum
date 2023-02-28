@@ -1,11 +1,11 @@
 import { setting } from './translation.js'
 
 const settingsBlock = document.querySelector('.settings');
-const settingsBtn = document.querySelector('.icon_settings');
-const checkBoxsList = document.querySelectorAll('.block input');
-const labelsList = document.querySelectorAll('.block label');
-const titleLangSelect = document.querySelector('.title__language');
-const titleFotoSelect = document.querySelector('.title__photo');
+const settingsBtn = document.querySelector('.icon-settings');
+const checkBoxsList = document.querySelectorAll('.checkbox__input');
+const labelsList = document.querySelectorAll('.checkbox__label');
+const titleLangSelect = document.querySelector('.select-group__title-language');
+const titleFotoSelect = document.querySelector('.select-group__title-photo');
 const ruLangOption = document.querySelector('option[value="ru"]');
 const enLangOption = document.querySelector('option[value="en"]');
 
