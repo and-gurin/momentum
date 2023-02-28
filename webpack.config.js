@@ -3,28 +3,42 @@ const path = require('path');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-
 module.exports = {
   watch: true,
-   watchOptions: {
+  watchOptions: {
     aggregateTimeout: 600,
   },
-  entry: './src/index.js',
+  entry: ['./src/index.js', './src/sass/style.scss'],
   output: {
-    filename: 'main.js',
-    clean: true,
-    path: path.resolve(__dirname, 'dist'),
+    path: path.join(__dirname, '/distrib'),
+    filename: 'index.js',
   },
   module: {
   rules: [
     {
-        test: /\.s[ac]ss$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader",
-        ],
-      },
+      test: /\.(?:ico|gif|png|jpg|jpeg|svg|webp)$/i,
+      type: 'asset/resource',
+    },
+    {
+      test: /\.(?:json)$/i,
+      type: 'asset/resource',
+    },
+    {
+      test: /\.(?:mp3|wav|ogg|mp4)$/i,
+      type: 'asset/resource',
+    },
+    {
+      test: /\.(woff(2)?|eot|ttf|otf)$/i,
+      type: 'asset/resource',
+    },
+    {
+      test: /\.s[ac]ss$/i,
+      use: [
+        MiniCssExtractPlugin.loader,
+        "css-loader",
+        "sass-loader",
+      ],
+    },
     {
       test: /\.m?js$/,
       exclude: /node_modules/,
@@ -48,13 +62,13 @@ module.exports = {
     new FileManagerPlugin({
       events: {
        onStart: {
-         delete: ['dist'],
+         delete: ['distrib'],
        },
        onEnd: {
            copy: [
              {
-               source: path.join('src', 'assets', 'sounds'),
-               destination: 'dist',
+              source: path.join('src', 'assets', 'sounds'),
+               destination: 'distrib',
              },
            ],
          },
