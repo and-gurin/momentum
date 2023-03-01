@@ -1,4 +1,4 @@
-import { showTime, showDate } from './js/clock.js';
+import { showTime } from './js/clock.js';
 import { playAudioClickHandler } from './js/audio-player.js';
 import { showGreeting } from './js/greeting.js';
 import { getQuote } from './js/quote.js';
@@ -37,7 +37,6 @@ window.onload = function () {
     //settings
     openCloseSettings();
     setUpEventListenersForSettings();
-    //setUpEventListenersForPhoto();
 
     //language
     changeLanguage();
