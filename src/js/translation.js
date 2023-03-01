@@ -3,7 +3,7 @@ import { getQuote } from './quote.js';
 import { getWeather } from './weather.js'
 import { showTime, timer } from './clock.js';
 import { showGreeting } from './greeting.js';
-import { translatePlaceholders } from './greeting.js'
+import { translatePlaceholders } from './greeting.js';
 
 export const weather = {
   'en': {
@@ -40,8 +40,8 @@ export const setting = {
     'change-lang': 'Выбрать язык',
     'russian': 'русский',
     'english': 'английский',
-    'change-photo': 'Выбрать фон',
-    'change-theme': 'Выбрать тему фона',
+    'change-photo': 'Выбрать ресурс фото',
+    'change-theme': 'Выбрать тэг для фото',
     'text-show"': 'Показать',
     'elements-date': 'дата',
     'elements-time': 'время',
@@ -52,11 +52,11 @@ export const setting = {
     'elements-todo': 'список дел',
   },
   'en': {
-    'change-lang': 'Choose language',
+    'change-lang': 'Change language',
     'russian': 'russian',
     'english': 'english',
-    'change-photo': 'Choose Photo Source',
-    'change-theme': 'Choose Background Theme',
+    'change-photo': 'Change Photo Source',
+    'change-theme': 'Change Photo Tag',
     'text-show"': 'Show',
     'elements-date': 'date',
     'elements-time': 'time',

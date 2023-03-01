@@ -1,7 +1,8 @@
 const body = document.querySelector('body');
 const sliderPrew = document.querySelector('.icon-slider_prew');
 const sliderNext = document.querySelector('.icon-slider_next');
-const photoSelect = document.querySelector('.select-group__select-photo')
+const photoSelect = document.querySelector('.select-group__select-photo');
+const tagSelect = document.querySelector('.select-group__select-tag');
 
 const apiKeyFlicr = 'c8df835955fdffeba282db75503e8f10';
 const apiKeyUnsplash = 'n6xOqe2zu-sbnT-6QBrQ2Lf5dJNIavTvLN_doll6D8E';
@@ -43,32 +44,36 @@ function getTimeOfDay() {
 export async function setBg () {
     let bgNum = String(randomNum).padStart(2, "0");
     let timeOfDay = getTimeOfDay();
+    let photoTag = tagSelect.value;
 
-    const urlFlickr = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKeyFlicr}&tags=nature&extras=url_l&format=json&nojsoncallback=1`;
-    const urlUnsplash = `https://api.unsplash.com/photos/random?orientation=landscape&query=nature&client_id=${apiKeyUnsplash}`
+    const urlFlickr = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKeyFlicr}&tags=${photoTag}&extras=url_l&format=json&nojsoncallback=1`;
+    const urlUnsplash = `https://api.unsplash.com/photos/random?orientation=landscape&query=${photoTag}&client_id=${apiKeyUnsplash}`
     
+    try {
+        const flicrRes = await fetch(urlFlickr);
+        const flickrData = await flicrRes.json();
 
-    const flicrRes = await fetch(urlFlickr);
-    const flickrData = await flicrRes.json();
+        const unsplashRes = await fetch(urlUnsplash);
+        const unsplashData = await unsplashRes.json();
 
-    const unsplashRes = await fetch(urlUnsplash);
-    const unsplashData = await unsplashRes.json();
+        img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`
 
-    img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`
-
-    if (photoSelect.value === 'unsplash') {
+        if (photoSelect.value === 'unsplash') {
         img.src = await unsplashData.urls.regular;
-    }
-    if (photoSelect.value === 'flickr') {
+        }
+        if (photoSelect.value === 'flickr') {
         img.src = await flickrData.photos.photo[randomNum].url_l;
-    } 
-    if (photoSelect.value === 'github'){
+        } 
+        if (photoSelect.value === 'github'){
+        img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`
+        }
+
+        img.onload = ()=> {
+            body.style.backgroundImage = `url(${img.src})`
+        } 
+    } catch {
         img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`
     }
-
-    img.onload = ()=> {
-        body.style.backgroundImage = `url(${img.src})`
-    } 
 }
-
-photoSelect.addEventListener('change', setBg)
+photoSelect.addEventListener('change', setBg);
+tagSelect.addEventListener('change', setBg);
