@@ -64,7 +64,7 @@ export async function setBg () {
         if (photoSelect.value === 'flickr') {
         img.src = await flickrData.photos.photo[randomNum].url_l;
         } 
-        if (photoSelect.value === 'github'){
+        else {
         img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`
         }
 
