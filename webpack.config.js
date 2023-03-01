@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   watch: true,
   watchOptions: {
-    aggregateTimeout: 600,
+    aggregateTimeout: 1600,
   },
   entry: ['./src/index.js', './src/sass/style.scss'],
   output: {

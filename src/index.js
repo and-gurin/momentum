@@ -23,7 +23,7 @@ window.onload = function () {
     //showDate(lang)
 
     //show greeting
-    showGreeting();
+    showGreeting(lang);
 
     //show qoute
     getQuote(lang);
@@ -37,6 +37,7 @@ window.onload = function () {
     //settings
     openCloseSettings();
     setUpEventListenersForSettings();
+    //setUpEventListenersForPhoto();
 
     //language
     changeLanguage();

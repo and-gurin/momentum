@@ -2,6 +2,8 @@ import { setSettingsData } from './settings.js';
 import { getQuote } from './quote.js';
 import { getWeather } from './weather.js'
 import { showTime, timer } from './clock.js';
+import { showGreeting } from './greeting.js';
+import { translatePlaceholders } from './greeting.js'
 
 export const weather = {
   'en': {
@@ -9,7 +11,7 @@ export const weather = {
     'wind': 'Wind speed',
     'wind_units': 'm/s',
     'humidity': 'Humidity',
-    'err': 'Data loading error. Enter the city again',
+    'err': 'Data loading error',
     'city': 'Minsk',
   },
   'ru': {
@@ -17,7 +19,7 @@ export const weather = {
     'wind': 'Скорость ветра',
     'wind_units': 'м/с',
     'humidity': 'Влажность',
-    'err': 'Ошибка загрузки данных. Введите город еще раз',
+    'err': 'Ошибка загрузки данных',
     'city': 'Минск'
   },
 };
@@ -97,10 +99,12 @@ export const changeLanguage = () => {
   language.addEventListener('change', (event) => {
     localStorage.setItem('language', event.target.value)
     getQuote(event.target.value);
+    showGreeting(event.target.value)
     clearTimeout(timer);
     showTime(event.target.value);
     getWeather(event.target.value);
     setSettingsData(event.target.value);
+    translatePlaceholders(event.target.value)
   })
 };
 
@@ -109,4 +113,3 @@ window.addEventListener('beforeunload', localStorage.setItem('language', languag
 language.value = languageFromLocalStorage || 'en';
 
 window.addEventListener('load', () => languageFromLocalStorage);
-

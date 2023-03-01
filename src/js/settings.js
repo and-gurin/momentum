@@ -1,4 +1,4 @@
-import { setting } from './translation.js'
+import { setting } from './translation.js';
 
 const settingsBlock = document.querySelector('.settings');
 const settingsBtn = document.querySelector('.icon-settings');
@@ -44,3 +44,4 @@ export const setSettingsData = (lang) => {
   ruLangOption.textContent = setting[lang].russian;
   enLangOption.textContent = setting[lang].english;
 }
+
