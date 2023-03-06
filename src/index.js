@@ -8,6 +8,7 @@ import { progressBarHandler } from './js/audio-player-progress.js';
 import { openCloseSettings, setUpEventListenersForSettings } from './js/settings.js';
 import { changeLanguage, lang } from './js/translation.js';
 import './sass/style.scss';
+import { openCloseTodo, setUpEventListenersForTodo } from './js/todo.js'
 
 
 window.onload = function () {
@@ -33,6 +34,10 @@ window.onload = function () {
 
     //weather
     getWeather(lang);
+
+    //todoList
+    openCloseTodo();
+    setUpEventListenersForTodo();
 
     //settings
     openCloseSettings();

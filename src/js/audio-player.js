@@ -16,9 +16,12 @@ export function playAudioClickHandler () {
 
 playList.forEach((track)=>{
     const li = document.createElement('li');
+    const icon = document.createElement('span')
     li.classList.add('play-item');
+    icon.classList.add('icon_play_track');
     li.textContent = track.title;
     playListContainer.append(li);
+    li.append(icon);
 })
 
 const playedTrack = document.querySelectorAll('.play-item');
@@ -30,8 +33,12 @@ function playNextTrack () {
     else playNum = 0
     audio.src = playList[playNum].src
     isPlay = true;
+    playedTrack.forEach((track, index) => {
+        track.classList.remove('item-active');
+        index === playNum ? track.classList.add('item-active') : 
+        track.classList.remove('item-active')
+    })
     playAudio()
-    console.log(playNum);
 }
 
 function playPrewTrack () {
@@ -41,15 +48,15 @@ function playPrewTrack () {
     else playNum = playList.length - 1;
     audio.src = playList[playNum].src
     isPlay = true;
-    playAudio()
-    console.log(playNum);
+    playedTrack.forEach((track, index) => {
+        track.classList.remove('item-active');
+        index === playNum ? track.classList.add('item-active') : 
+        track.classList.remove('item-active')
+    })
+    playAudio() 
 }
 
 function playAudio () {
-    playedTrack.forEach((track, index)=>{
-    index === playNum ? track.classList.add('item-active') : 
-    track.classList.remove('item-active')
-})
     if (isPlay) {
         audio.play();
         isPlay = false;
@@ -61,5 +68,20 @@ function playAudio () {
         playButton.classList.remove('pause');
     }
 }
+
+playedTrack.forEach((track, index)=>{
+    
+    track.addEventListener('click', ()=> {
+        track.classList.remove('item-active');
+        audio.src = playList[index].src;
+        console.log(playList.indexOf(playList[index]))
+        isPlay = true;
+        if (index === playList.indexOf(playList[index])) {
+            track.classList.add('item-active')
+        } else {track.classList.remove('item-active')} 
+        playAudio();
+})
+})
+
 
 audio.addEventListener('ended', playNextTrack);
