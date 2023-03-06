@@ -1,4 +1,4 @@
-import { showTime, showDate } from './js/clock.js';
+import { showTime } from './js/clock.js';
 import { playAudioClickHandler } from './js/audio-player.js';
 import { showGreeting } from './js/greeting.js';
 import { getQuote } from './js/quote.js';
@@ -8,6 +8,7 @@ import { progressBarHandler } from './js/audio-player-progress.js';
 import { openCloseSettings, setUpEventListenersForSettings } from './js/settings.js';
 import { changeLanguage, lang } from './js/translation.js';
 import './sass/style.scss';
+import { openCloseTodo, setUpEventListenersForTodo } from './js/todo.js'
 
 
 window.onload = function () {
@@ -23,7 +24,7 @@ window.onload = function () {
     //showDate(lang)
 
     //show greeting
-    showGreeting();
+    showGreeting(lang);
 
     //show qoute
     getQuote(lang);
@@ -33,6 +34,10 @@ window.onload = function () {
 
     //weather
     getWeather(lang);
+
+    //todoList
+    openCloseTodo();
+    setUpEventListenersForTodo();
 
     //settings
     openCloseSettings();

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    height: 30vh;
+    height: 35vh;
 }
 
 .audio-player-controls {
@@ -91,12 +91,14 @@
 
 .play-item {
     position: relative;
+    width: 250px;
     padding: 3px;
     padding-left: 20px;
     list-style: none;
     opacity: .8;
-    cursor: pointer;
     transition: .3s;
+    //cursor: pointer;
+    display: flex;
 }
 
 .play-item:hover {
@@ -113,6 +115,17 @@
 
 .item-active::before {
     color: #C5B358;
+}
+
+.icon_play_track {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+    line-height: 26px;
+    margin-left: auto;
+    cursor: pointer;
+    background-image: url(../assets/svg/play.svg);
 }
 
 input[type=range] {
@@ -174,9 +187,9 @@ input[type=range] {
     font-size: 20px;
     line-height: 24px;
     color: #fff;
-    border-bottom: 1px solid #fff;
     background-color: transparent;
     border: 0;
+    border-bottom: 1px solid #fff;
     outline: 0;
 }
 

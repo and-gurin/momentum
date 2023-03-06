@@ -6,11 +6,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   watch: true,
   watchOptions: {
-    aggregateTimeout: 600,
+    aggregateTimeout: 1600,
   },
   entry: ['./src/index.js', './src/sass/style.scss'],
   output: {
-    path: path.join(__dirname, '/distrib'),
+    path: path.join(__dirname, '/dist'),
     filename: 'index.js',
   },
   module: {
@@ -62,13 +62,13 @@ module.exports = {
     new FileManagerPlugin({
       events: {
        onStart: {
-         delete: ['distrib'],
+         delete: ['dist'],
        },
        onEnd: {
            copy: [
              {
               source: path.join('src', 'assets', 'sounds'),
-               destination: 'distrib',
+               destination: 'dist',
              },
            ],
          },

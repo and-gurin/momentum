@@ -14,6 +14,6 @@ export async function getQuote (lang) {
     const randomQoute = getRandomNum();
     quote.textContent = data[randomQoute].text;
     author.textContent = data[randomQoute].author;
+    quotesIcon.addEventListener('click', ()=>getQuote(lang))
 }
 
-quotesIcon.addEventListener('click', ()=>getQuote(lang))

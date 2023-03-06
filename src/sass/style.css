@@ -70,11 +70,11 @@ body {
     min-height: 80px;
     font-size: 72px;
   }
-  .greeting-container {
+  .greeting {
     min-height: 40px;
     font-size: 32px;
   }
-  .greeting {
+  .greeting__welcome {
     padding: 5px;
   }
   .name {
@@ -982,7 +982,7 @@ input[type=range]::-moz-range-thumb {
   position: relative;
 }
 
-.icon_settings {
+.icon-settings {
   width: 40px;
   height: 40px;
   background-size: 40px 40px;
@@ -1013,20 +1013,7 @@ input[type=range]::-moz-range-thumb {
   transition: all 0.6s ease 0s;
 }
 
-.settings select {
-  font-size: 0.8em;
-  outline: none;
-  border-radius: 5px;
-}
-
-.settings input {
-  border-radius: 5px;
-  outline: none;
-  padding: 9px;
-  font-size: 12px;
-}
-
-.change {
+.select-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1034,6 +1021,13 @@ input[type=range]::-moz-range-thumb {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 20px;
+}
+
+.select-group__select-language,
+select-group__select-photo {
+  font-size: 0.8em;
+  outline: none;
+  border-radius: 5px;
 }
 
 .settings__blocks {
@@ -1049,7 +1043,7 @@ input[type=range]::-moz-range-thumb {
           align-items: flex-start;
 }
 
-.settings__blocks__wrapper {
+.settings__blocks-wrapper {
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -1062,9 +1056,16 @@ input[type=range]::-moz-range-thumb {
   border-radius: 10px;
 }
 
-.settings__blocks__wrapper input,
-.settings__blocks__wrapper label {
+.checkbox__input,
+.checkbox__label {
   cursor: pointer;
+}
+
+.checkbox__input {
+  border-radius: 5px;
+  outline: none;
+  padding: 9px;
+  font-size: 12px;
 }
 
 .quotes {

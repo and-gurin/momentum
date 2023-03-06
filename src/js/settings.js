@@ -1,4 +1,4 @@
-import { setting } from './translation.js'
+import { setting } from './translation.js';
 
 const settingsBlock = document.querySelector('.settings');
 const settingsBtn = document.querySelector('.icon-settings');
@@ -6,6 +6,7 @@ const checkBoxsList = document.querySelectorAll('.checkbox__input');
 const labelsList = document.querySelectorAll('.checkbox__label');
 const titleLangSelect = document.querySelector('.select-group__title-language');
 const titleFotoSelect = document.querySelector('.select-group__title-photo');
+const titleTagSelect = document.querySelector('.select-group__title-tag');
 const ruLangOption = document.querySelector('option[value="ru"]');
 const enLangOption = document.querySelector('option[value="en"]');
 
@@ -41,6 +42,8 @@ export const setSettingsData = (lang) => {
   });
   titleLangSelect.textContent = setting[lang]['change-lang'];
   titleFotoSelect.textContent = setting[lang]['change-photo'];
+  titleTagSelect.textContent = setting[lang]['change-theme']
   ruLangOption.textContent = setting[lang].russian;
   enLangOption.textContent = setting[lang].english;
 }
+

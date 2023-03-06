@@ -7,7 +7,7 @@ const wind = document.querySelector('.weater__wind');
 const humidity = document.querySelector('.weather__humidity');
 const city = document.querySelector('.city');
 
-export async function getWeather(lang, city = localStorage.getItem('city') ? localStorage.getItem('city') : 'Minsk') {  
+export async function getWeather(lang, city = localStorage.getItem('city') ? localStorage.getItem('city') : `${weather[lang].sity}`) {  
     weatherIcon.className = 'weather-icon owf';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${lang}&appid=f793b145b04b72ffdfd775747be4fac1&units=metric`;
     try {
@@ -23,7 +23,7 @@ export async function getWeather(lang, city = localStorage.getItem('city') ? loc
         temperature.textContent = '';
         wind.textContent = '';
         humidity.textContent = '';
-        weatherDescription.textContent = 'Data loading error. Enter the city again';
+        weatherDescription.textContent = `${weather[lang].err}`;
     }
 }
 
