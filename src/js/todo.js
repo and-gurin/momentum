@@ -24,7 +24,6 @@ export const setUpEventListenersForTodo = () => {
     todoContainer.addEventListener('click', (event) => {
         if (event.target.classList.contains('icon-delete')||event.target.parentElement.classList.contains('icon-delete')) {
         const taskId = event.target.closest('li').id;
-        console.log(parseInt(taskId, 10));
         deleteTask(taskId)
     }
     })
@@ -34,8 +33,6 @@ export const setUpEventListenersForTodo = () => {
     })
 };
 
-
-console.log(todoList)
 function addNewTask () {
     if (todoInput.value !== '') {
         let task = {
@@ -69,7 +66,6 @@ function deleteTask (taskId) {
     document.getElementById(taskId).remove();
     localStorage.setItem('todo-task', JSON.stringify(tasks));
     todoList = tasks;
-    console.log(tasks)
 }
 
 function changeTaskStatus (taskId, taskCheckBox) {
