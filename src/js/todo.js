@@ -5,10 +5,10 @@ const todoButton = document.querySelector('.input-group__button');
 const todoContainer = document.querySelector('.todo-container');
 
 let isOpen = false;
-let todoList;
+let todoList = [];
 
 if (localStorage.getItem('todo-task')) {
-    todoList = JSON.parse(localStorage.getItem('todo-task'))||[];
+    todoList = JSON.parse(localStorage.getItem('todo-task'));
     todoList.map(item=>{createTask(item)})
 }
 
