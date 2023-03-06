@@ -8,7 +8,7 @@ let isOpen = false;
 let todoList;
 
 if (localStorage.getItem('todo-task')) {
-    todoList = JSON.parse(localStorage.getItem('todo-task'));
+    todoList = JSON.parse(localStorage.getItem('todo-task'))||[];
     todoList.map(item=>{createTask(item)})
 }
 
@@ -77,9 +77,5 @@ function changeTaskStatus (taskId, taskCheckBox) {
     } else {
         taskCheckBox.removeAttribute('checked');
         taskCheckBox.nextElementSibling.classList.remove('checked')
-
     }
 }
-
-
-
