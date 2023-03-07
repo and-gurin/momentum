@@ -7,8 +7,9 @@ import { getWeather } from './js/weather.js';
 import { progressBarHandler } from './js/audio-player-progress.js';
 import { openCloseSettings, setUpEventListenersForSettings } from './js/settings.js';
 import { changeLanguage, lang } from './js/translation.js';
+import { openCloseTodo, setUpEventListenersForTodo } from './js/todo.js';
 import './sass/style.scss';
-import { openCloseTodo, setUpEventListenersForTodo } from './js/todo.js'
+
 
 
 window.onload = function () {
