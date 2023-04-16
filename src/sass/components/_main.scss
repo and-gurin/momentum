@@ -32,6 +32,10 @@
     margin-bottom: 10px;
     font-size: 100px;
     letter-spacing: -4px;
+    @media (max-width: 768px) {
+        min-height: 80px;
+        font-size: 72px;
+    }
 }
 
 .date {
@@ -48,12 +52,19 @@
     min-height: 48px;
     width: 100%;
     font-size: 40px;
+    @media (max-width: 768px) {
+        min-height: 40px;
+        font-size: 32px;
+    }
 }
 
 .greeting__welcome {
     flex: 1;
     padding: 10px;
     text-align: right;
+    @media (max-width: 768px) {
+        padding: 5px;
+    }
 }
 
 .name {
@@ -66,6 +77,10 @@
     background-color: transparent;
     border: 0;
     outline: 0;
+    @media (max-width: 768px) {
+        font-size: 32px;
+        padding: 5px;
+    }
     &::placeholder {
         color: #fff;
         opacity: .6;
