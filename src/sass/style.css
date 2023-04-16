@@ -1,11 +1,10 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Arial-MT";
   src: url("/src/assets/fonts/Arial-MT.woff");
 }
-
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -16,25 +15,24 @@ html {
 }
 
 body {
-  min-width: 480px;
   min-height: 100vh;
   font-size: 1.6rem;
   font-family: "Arial", Verdana, sans-serif;
   color: #fff;
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hide {
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
 }
 
 .show {
   visibility: visible;
   opacity: 1;
-  -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
 }
 
@@ -48,21 +46,17 @@ body {
   background-color: transparent;
   border: 0;
   outline: 0;
-  opacity: .8;
+  opacity: 0.8;
   cursor: pointer;
-  -webkit-transition: .3s;
-  transition: .3s;
+  transition: 0.3s;
 }
-
 .icon:hover {
   opacity: 1;
 }
-
 .icon:active {
   border: 0;
   outline: 0;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -82,7 +76,6 @@ body {
     padding: 5px;
   }
 }
-
 /*!
  *  owfont-regular 1.0.0 by Deniz Fuchidzhiev - http://websygen.com
  *  License - font: SIL OFL 1.1, css: MIT License
@@ -90,13 +83,12 @@ body {
 /* FONT PATH
  * -------------------------- */
 @font-face {
-  font-family: 'owfont';
+  font-family: "owfont";
   src: url("../assets/fonts/owfont-regular.eot?v=1.0.0");
   src: url("../assets/fonts/owfont-regular.eot?#iefix&v=1.0.0") format("embedded-opentype"), url("../assets/fonts/owfont-regular.woff") format("woff"), url("../assets/fonts/owfont-regular.ttf") format("truetype"), url("../assets/fonts/owfont-regular.svg#owf-regular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 .owf {
   display: inline-block;
   font: normal normal normal 14px/1 owfont;
@@ -104,8 +96,7 @@ body {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
 /* makes the font 33% larger relative to the icon container */
@@ -159,9 +150,9 @@ body {
 }
 
 .owf-border {
-  padding: .2em .25em .15em;
+  padding: 0.2em 0.25em 0.15em;
   border: solid 0.08em #eeeeee;
-  border-radius: .1em;
+  border-radius: 0.1em;
 }
 
 .owf-pull-right {
@@ -173,11 +164,11 @@ body {
 }
 
 .owf.owf-pull-left {
-  margin-right: .3em;
+  margin-right: 0.3em;
 }
 
 .owf.owf-pull-right {
-  margin-left: .3em;
+  margin-left: 0.3em;
 }
 
 /* owfont uses the Unicode Private Use Area (PUA) to ensure screen
@@ -188,70 +179,70 @@ body {
 .owf-200:before,
 .owf-200-d:before,
 .owf-200-n:before {
-  content: "\EB28";
+  content: "\eb28";
 }
 
 /* thunderstorm with rain */
 .owf-201:before,
 .owf-201-d:before,
 .owf-201-n:before {
-  content: "\EB29";
+  content: "\eb29";
 }
 
 /* thunderstorm with heavy rain */
 .owf-202:before,
 .owf-202-d:before,
 .owf-202-n:before {
-  content: "\EB2A";
+  content: "\eb2a";
 }
 
 /*  light thunderstorm  */
 .owf-210:before,
 .owf-210-d:before,
 .owf-210-n:before {
-  content: "\EB32";
+  content: "\eb32";
 }
 
 /*  thunderstorm  */
 .owf-211:before,
 .owf-211-d:before,
 .owf-211-n:before {
-  content: "\EB33";
+  content: "\eb33";
 }
 
 /*   heavy thunderstorm   */
 .owf-212:before,
 .owf-212-d:before,
 .owf-212-n:before {
-  content: "\EB34";
+  content: "\eb34";
 }
 
 /*   ragged thunderstorm   */
 .owf-221:before,
 .owf-221-d:before,
 .owf-221-n:before {
-  content: "\EB3D";
+  content: "\eb3d";
 }
 
 /*  thunderstorm with light drizzle    */
 .owf-230:before,
 .owf-230-d:before,
 .owf-230-n:before {
-  content: "\EB46";
+  content: "\eb46";
 }
 
 /*  thunderstorm with drizzle     */
 .owf-231:before,
 .owf-231-d:before,
 .owf-231-n:before {
-  content: "\EB47";
+  content: "\eb47";
 }
 
 /* thunderstorm with heavy drizzle     */
 .owf-232:before,
 .owf-232-d:before,
 .owf-232-n:before {
-  content: "\EB48";
+  content: "\eb48";
 }
 
 /*   Drizzle - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
@@ -259,63 +250,63 @@ body {
 .owf-300:before,
 .owf-300-d:before,
 .owf-300-n:before {
-  content: "\EB8C";
+  content: "\eb8c";
 }
 
 /*  drizzle */
 .owf-301:before,
 .owf-301-d:before,
 .owf-301-n:before {
-  content: "\EB8D";
+  content: "\eb8d";
 }
 
 /*  heavy intensity drizzle  */
 .owf-302:before,
 .owf-302-d:before,
 .owf-302-n:before {
-  content: "\EB8E";
+  content: "\eb8e";
 }
 
 /*   light intensity drizzle rain  */
 .owf-310:before,
 .owf-310-d:before,
 .owf-310-n:before {
-  content: "\EB96";
+  content: "\eb96";
 }
 
 /*  drizzle rain  */
 .owf-311:before,
 .owf-311-d:before,
 .owf-311-n:before {
-  content: "\EB97";
+  content: "\eb97";
 }
 
 /* heavy intensity drizzle rain */
 .owf-312:before,
 .owf-312-d:before,
 .owf-312-n:before {
-  content: "\EB98";
+  content: "\eb98";
 }
 
 /* shower rain and drizzle  */
 .owf-313:before,
 .owf-313-d:before,
 .owf-313-n:before {
-  content: "\EB99";
+  content: "\eb99";
 }
 
 /* heavy shower rain and drizzle*/
 .owf-314:before,
 .owf-314-d:before,
 .owf-314-n:before {
-  content: "\EB9A";
+  content: "\eb9a";
 }
 
 /* shower drizzle */
 .owf-321:before,
 .owf-321-d:before,
 .owf-321-n:before {
-  content: "\EBA1";
+  content: "\eba1";
 }
 
 /*   Rain - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
@@ -323,70 +314,70 @@ body {
 .owf-500:before,
 .owf-500-d:before,
 .owf-500-n:before {
-  content: "\EC54";
+  content: "\ec54";
 }
 
 /* moderate rain  */
 .owf-501:before,
 .owf-501-d:before,
 .owf-501-n:before {
-  content: "\EC55";
+  content: "\ec55";
 }
 
 /* heavy intensity rain  */
 .owf-502:before,
 .owf-502-d:before,
 .owf-502-n:before {
-  content: "\EC56";
+  content: "\ec56";
 }
 
 /* very heavy rain   */
 .owf-503:before,
 .owf-503-d:before,
 .owf-503-n:before {
-  content: "\EC57";
+  content: "\ec57";
 }
 
 /* extreme rain    */
 .owf-504:before,
 .owf-504-d:before,
 .owf-504-n:before {
-  content: "\EC58";
+  content: "\ec58";
 }
 
 /* freezing rain    */
 .owf-511:before,
 .owf-511-d:before,
 .owf-511-n:before {
-  content: "\EC5F";
+  content: "\ec5f";
 }
 
 /*  light intensity shower rain    */
 .owf-520:before,
 .owf-520-d:before,
 .owf-520-n:before {
-  content: "\EC68";
+  content: "\ec68";
 }
 
 /* shower rain  */
 .owf-521:before,
 .owf-521-d:before,
 .owf-521-n:before {
-  content: "\EC69";
+  content: "\ec69";
 }
 
 /*  heavy intensity shower rain  */
 .owf-522:before,
 .owf-522-d:before,
 .owf-522-n:before {
-  content: "\EC6A";
+  content: "\ec6a";
 }
 
 /* ragged shower rain  */
 .owf-531:before,
 .owf-531-d:before,
 .owf-531-n:before {
-  content: "\EC73";
+  content: "\ec73";
 }
 
 /*   Snow - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
@@ -394,70 +385,70 @@ body {
 .owf-600:before,
 .owf-600-d:before,
 .owf-600-n:before {
-  content: "\ECB8";
+  content: "\ecb8";
 }
 
 /*  snow  */
 .owf-601:before,
 .owf-601-d:before,
 .owf-601-n:before {
-  content: "\ECB9";
+  content: "\ecb9";
 }
 
 /*   heavy snow   */
 .owf-602:before,
 .owf-602-d:before,
 .owf-602-n:before {
-  content: "\ECBA";
+  content: "\ecba";
 }
 
 /*  sleet  */
 .owf-611:before,
 .owf-611-d:before,
 .owf-611-n:before {
-  content: "\ECC3";
+  content: "\ecc3";
 }
 
 /*   shower sleet */
 .owf-612:before,
 .owf-612-d:before,
 .owf-612-n:before {
-  content: "\ECC4";
+  content: "\ecc4";
 }
 
 /* light rain and snow */
 .owf-615:before,
 .owf-615-d:before,
 .owf-615-n:before {
-  content: "\ECC7";
+  content: "\ecc7";
 }
 
 /* rain and snow  */
 .owf-616:before,
 .owf-616-d:before,
 .owf-616-n:before {
-  content: "\ECC8";
+  content: "\ecc8";
 }
 
 /* light shower snow  */
 .owf-620:before,
 .owf-620-d:before,
 .owf-620-n:before {
-  content: "\ECCC";
+  content: "\eccc";
 }
 
 /* shower snow  */
 .owf-621:before,
 .owf-621-d:before,
 .owf-621-n:before {
-  content: "\ECCD";
+  content: "\eccd";
 }
 
 /* heavy shower snow  */
 .owf-622:before,
 .owf-622-d:before,
 .owf-622-n:before {
-  content: "\ECCE";
+  content: "\ecce";
 }
 
 /*   Atmosphere - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
@@ -465,70 +456,70 @@ body {
 .owf-701:before,
 .owf-701-d:before,
 .owf-701-n:before {
-  content: "\ED1D";
+  content: "\ed1d";
 }
 
 /* smoke */
 .owf-711:before,
 .owf-711-d:before,
 .owf-711-n:before {
-  content: "\ED27";
+  content: "\ed27";
 }
 
 /* haze */
 .owf-721:before,
 .owf-721-d:before,
 .owf-721-n:before {
-  content: "\ED31";
+  content: "\ed31";
 }
 
 /* Sand/Dust Whirls */
 .owf-731:before,
 .owf-731-d:before,
 .owf-731-n:before {
-  content: "\ED3B";
+  content: "\ed3b";
 }
 
 /* Fog */
 .owf-741:before,
 .owf-741-d:before,
 .owf-741-n:before {
-  content: "\ED45";
+  content: "\ed45";
 }
 
 /* sand */
 .owf-751:before,
 .owf-751-d:before,
 .owf-751-n:before {
-  content: "\ED4F";
+  content: "\ed4f";
 }
 
 /* dust */
 .owf-761:before,
 .owf-761-d:before,
 .owf-761-n:before {
-  content: "\ED59";
+  content: "\ed59";
 }
 
 /*  VOLCANIC ASH  */
 .owf-762:before,
 .owf-762-d:before,
 .owf-762-n:before {
-  content: "\ED5A";
+  content: "\ed5a";
 }
 
 /* SQUALLS */
 .owf-771:before,
 .owf-771-d:before,
 .owf-771-n:before {
-  content: "\ED63";
+  content: "\ed63";
 }
 
 /* TORNADO */
 .owf-781:before,
 .owf-781-d:before,
 .owf-781-n:before {
-  content: "\ED6D";
+  content: "\ed6d";
 }
 
 /*   Clouds - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
@@ -538,46 +529,46 @@ body {
 .owf-800-d:before,
 .owf-951:before,
 .owf-951-d:before {
-  content: "\ED80";
+  content: "\ed80";
 }
 
 .owf-800-n:before,
 .owf-951-n:before {
-  content: "\F168";
+  content: "\f168";
 }
 
 /*  few clouds   */
 .owf-801:before,
 .owf-801-d:before {
-  content: "\ED81";
+  content: "\ed81";
 }
 
 .owf-801-n:before {
-  content: "\F169";
+  content: "\f169";
 }
 
 /* scattered clouds */
 .owf-802:before,
 .owf-802-d:before {
-  content: "\ED82";
+  content: "\ed82";
 }
 
 .owf-802-n:before {
-  content: "\F16A";
+  content: "\f16a";
 }
 
 /* broken clouds  */
 .owf-803:before,
 .owf-803-d:before,
 .owf-803-n:before {
-  content: "\ED83";
+  content: "\ed83";
 }
 
 /* overcast clouds  */
 .owf-804:before,
 .owf-804-d:before,
 .owf-804-n:before {
-  content: "\ED84";
+  content: "\ed84";
 }
 
 /*   Extreme - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
@@ -585,49 +576,49 @@ body {
 .owf-900:before,
 .owf-900-d:before,
 .owf-900-n:before {
-  content: "\EDE4";
+  content: "\ede4";
 }
 
 /*  tropical storm  */
 .owf-901:before,
 .owf-901-d:before,
 .owf-901-n:before {
-  content: "\EDE5";
+  content: "\ede5";
 }
 
 /* hurricane */
 .owf-902:before,
 .owf-902-d:before,
 .owf-902-n:before {
-  content: "\EDE6";
+  content: "\ede6";
 }
 
 /* cold */
 .owf-903:before,
 .owf-903-d:before,
 .owf-903-n:before {
-  content: "\EDE7";
+  content: "\ede7";
 }
 
 /* hot */
 .owf-904:before,
 .owf-904-d:before,
 .owf-904-n:before {
-  content: "\EDE8";
+  content: "\ede8";
 }
 
 /* windy */
 .owf-905:before,
 .owf-905-d:before,
 .owf-905-n:before {
-  content: "\EDE9";
+  content: "\ede9";
 }
 
 /* hail */
 .owf-906:before,
 .owf-906-d:before,
 .owf-906-n:before {
-  content: "\EDEA";
+  content: "\edea";
 }
 
 /*   Additional - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
@@ -635,84 +626,84 @@ body {
 .owf-950:before,
 .owf-950-d:before,
 .owf-950-n:before {
-  content: "\EE16";
+  content: "\ee16";
 }
 
 /*  Light breeze  */
 .owf-952:before,
 .owf-952-d:before,
 .owf-952-n:before {
-  content: "\EE18";
+  content: "\ee18";
 }
 
 /*  Gentle Breeze  */
 .owf-953:before,
 .owf-953-d:before,
 .owf-953-n:before {
-  content: "\EE19";
+  content: "\ee19";
 }
 
 /*  Moderate breeze  */
 .owf-954:before,
 .owf-954-d:before,
 .owf-954-n:before {
-  content: "\EE1A";
+  content: "\ee1a";
 }
 
 /* Fresh Breeze  */
 .owf-955:before,
 .owf-955-d:before,
 .owf-955-n:before {
-  content: "\EE1B";
+  content: "\ee1b";
 }
 
 /* Strong  Breeze  */
 .owf-956:before,
 .owf-956-d:before,
 .owf-956-n:before {
-  content: "\EE1C";
+  content: "\ee1c";
 }
 
 /* High wind, near gale  */
 .owf-957:before,
 .owf-957-d:before,
 .owf-957-n:before {
-  content: "\EE1D";
+  content: "\ee1d";
 }
 
 /* Gale */
 .owf-958:before,
 .owf-958-d:before,
 .owf-958-n:before {
-  content: "\EE1E";
+  content: "\ee1e";
 }
 
 /*  Severe Gale  */
 .owf-959:before,
 .owf-959-d:before,
 .owf-959-n:before {
-  content: "\EE1F";
+  content: "\ee1f";
 }
 
 /* Storm */
 .owf-960:before,
 .owf-960-d:before,
 .owf-960-n:before {
-  content: "\EE20";
+  content: "\ee20";
 }
 
 /*  Violent Storm  */
 .owf-961:before,
 .owf-961-d:before,
 .owf-961-n:before {
-  content: "\EE21";
+  content: "\ee21";
 }
 
 /* Hurricane */
 .owf-962:before,
 .owf-962-d:before,
 .owf-962-n:before {
-  content: "\EE22";
+  content: "\ee22";
 }
 
 .wrapper {
@@ -721,44 +712,22 @@ body {
 }
 
 .header__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  height: 30vh;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 35vh;
 }
 
 .audio-player-controls {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 .audio-player-controls__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   width: 120px;
   height: 50px;
   margin-bottom: 8px;
@@ -784,15 +753,9 @@ body {
 }
 
 .audio-player-audio-volume {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .volume-container {
@@ -800,7 +763,6 @@ body {
   position: relative;
   z-index: 2;
 }
-
 .volume-container:hover .volume-slider {
   left: -123px;
   width: 120px;
@@ -808,17 +770,12 @@ body {
 
 .volume-button {
   height: 26px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .volume {
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
+  transform: scale(0.7);
 }
 
 .volume-slider {
@@ -829,10 +786,8 @@ body {
   width: 0;
   height: 15px;
   background: white;
-  -webkit-box-shadow: 0 0 20px #000a;
-          box-shadow: 0 0 20px #000a;
-  -webkit-transition: .25s;
-  transition: .25s;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6666666667);
+  transition: 0.25s;
 }
 
 .volume-percentage {
@@ -847,13 +802,13 @@ body {
 
 .play-item {
   position: relative;
+  width: 200px;
   padding: 3px;
   padding-left: 20px;
   list-style: none;
-  opacity: .8;
-  cursor: pointer;
-  -webkit-transition: .3s;
-  transition: .3s;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: flex;
 }
 
 .play-item:hover {
@@ -861,7 +816,7 @@ body {
 }
 
 .play-item::before {
-  content: "\2713";
+  content: "✓";
   position: absolute;
   left: 0;
   top: 2px;
@@ -872,21 +827,28 @@ body {
   color: #C5B358;
 }
 
+.icon_play_track {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-size: 25px 25px;
+  line-height: 26px;
+  margin-left: auto;
+  cursor: pointer;
+  background-image: url(../assets/svg/play.svg);
+}
+
 input[type=range] {
-  width: 250px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  width: 200px;
+  appearance: none;
   outline: none;
   overflow: hidden;
   height: 10px;
 }
-
 input[type=range]::-webkit-slider-runnable-track {
   height: 10px;
   background-color: blue;
 }
-
 input[type=range]::-webkit-slider-thumb {
   background: #ecf0f1;
   cursor: pointer;
@@ -894,15 +856,12 @@ input[type=range]::-webkit-slider-thumb {
   height: 15px;
   -webkit-appearance: none;
   margin-top: -4px;
-  -webkit-box-shadow: -200px 0 0 200px #43e5f7;
-          box-shadow: -200px 0 0 200px #43e5f7;
+  box-shadow: -200px 0 0 200px #43e5f7;
 }
-
 input[type=range]::-moz-range-track {
   height: 7px;
   background-color: blue;
 }
-
 input[type=range]::-moz-range-thumb {
   background: #ecf0f1;
   cursor: pointer;
@@ -915,22 +874,14 @@ input[type=range]::-moz-range-thumb {
 
 .weather {
   text-align: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   row-gap: 5px;
 }
 
 .description-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 12px;
-          column-gap: 12px;
+  column-gap: 12px;
 }
 
 .weather-icon {
@@ -946,25 +897,10 @@ input[type=range]::-moz-range-thumb {
   font-size: 20px;
   line-height: 24px;
   color: #fff;
-  border-bottom: 1px solid #fff;
   background-color: transparent;
   border: 0;
+  border-bottom: 1px solid #fff;
   outline: 0;
-}
-
-.city::-webkit-input-placeholder {
-  color: #fff;
-  opacity: 0.6;
-}
-
-.city:-ms-input-placeholder {
-  color: #fff;
-  opacity: 0.6;
-}
-
-.city::-ms-input-placeholder {
-  color: #fff;
-  opacity: 0.6;
 }
 
 .city::placeholder {
@@ -973,82 +909,59 @@ input[type=range]::-moz-range-thumb {
 }
 
 .footer__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   position: relative;
 }
 
 .icon-settings {
-  width: 40px;
-  height: 40px;
-  background-size: 40px 40px;
-  background-image: url("../assets/svg/gear.png");
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+  background-image: url("../assets/svg/gear_.png");
   position: absolute;
   left: 20px;
   bottom: 50px;
 }
 
 .settings {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 280px;
   height: auto;
   overflow-y: auto;
   position: fixed;
   left: 10px;
   bottom: 90px;
-  -webkit-transform: translateX(-120%);
-          transform: translateX(-120%);
+  transform: translateX(-120%);
   padding: 5px;
-  -webkit-transition: all 0.6s ease 0s;
   transition: all 0.6s ease 0s;
 }
 
 .select-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   height: 20px;
 }
 
 .select-group__select-language,
-select-group__select-photo {
+.select-group__select-photo,
+.select-group__select-tag {
   font-size: 0.8em;
   outline: none;
   border-radius: 5px;
 }
 
 .settings__blocks {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .settings__blocks-wrapper {
   width: 100%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   justify-items: start;
   padding: 5px;
@@ -1069,21 +982,13 @@ select-group__select-photo {
 }
 
 .quotes {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
   height: 30vh;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   justify-self: center;
+  max-width: 480px;
 }
 
 .qoutes-icon {
@@ -1107,24 +1012,105 @@ select-group__select-photo {
   min-height: 20px;
 }
 
+.icon-todo {
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+  background-image: url("../assets/svg/todo.png");
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: auto;
+  overflow-y: auto;
+  position: fixed;
+  right: 10px;
+  bottom: 90px;
+  transform: translateX(120%);
+  padding: 17px 5px;
+  transition: all 0.6s ease 0s;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-group__input {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  outline: 0;
+  flex-basis: auto;
+}
+
+.input-group__input::placeholder {
+  color: #fff;
+  opacity: 0.6;
+}
+
+.input-group__button {
+  flex-basis: auto;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 70px;
+  transition: all 0.6s ease 0s;
+}
+
+.input-group__button:hover {
+  background-color: rgb(86, 86, 253);
+}
+
+.icon-delete {
+  width: 20px;
+  height: 20px;
+  background-size: 15px 15px;
+  background-image: url("../assets/svg/delete.png");
+}
+
+.todo-container {
+  width: 100%;
+  text-align: center;
+}
+
+.todo-container li {
+  list-style-type: none;
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+  padding: 5px 10px;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
 .main {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 40vh;
-  min-height: 260px;
+  max-height: 30vh;
+  min-height: 220px;
   padding: 20px;
 }
 
@@ -1159,34 +1145,23 @@ select-group__select-photo {
 }
 
 .greeting {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: center;
   min-height: 48px;
   width: 100%;
   font-size: 40px;
 }
 
 .greeting__welcome {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   padding: 10px;
   text-align: right;
 }
 
 .name {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   max-width: 50%;
   padding: 10px;
   font-size: 40px;
@@ -1196,24 +1171,9 @@ select-group__select-photo {
   border: 0;
   outline: 0;
 }
-
-.name::-webkit-input-placeholder {
-  color: #fff;
-  opacity: .6;
-}
-
-.name:-ms-input-placeholder {
-  color: #fff;
-  opacity: .6;
-}
-
-.name::-ms-input-placeholder {
-  color: #fff;
-  opacity: .6;
-}
-
 .name::placeholder {
   color: #fff;
-  opacity: .6;
+  opacity: 0.6;
 }
+
 /*# sourceMappingURL=style.css.map */

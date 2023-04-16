@@ -91,13 +91,12 @@
 
 .play-item {
     position: relative;
-    width: 250px;
+    width: 200px;
     padding: 3px;
     padding-left: 20px;
     list-style: none;
     opacity: .8;
     transition: .3s;
-    //cursor: pointer;
     display: flex;
 }
 
@@ -129,7 +128,7 @@
 }
 
 input[type=range] {
-    width: 250px;
+    width: 200px;
     appearance: none;
     outline: none;
     overflow: hidden;

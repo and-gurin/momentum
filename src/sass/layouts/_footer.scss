@@ -13,7 +13,7 @@
     background-image: url('../assets/svg/gear_.png');
     position: absolute;
     left: 20px;
-    bottom: 50px;
+    bottom: 20px;
 }
 
 .settings {
@@ -80,6 +80,7 @@
     height: 30vh;
     align-items: center;
     justify-self: center;
+    max-width: 480px;
 }
 
 .qoutes-icon {
@@ -110,7 +111,7 @@
     background-image: url('../assets/svg/todo.png');
     position: absolute;
     right: 20px;
-    bottom: 50px;
+    bottom: 20px;
 }
 
 .todo {
