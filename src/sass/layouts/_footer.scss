@@ -77,7 +77,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 30vh;
+    height: 23vh;
     align-items: center;
     justify-self: center;
     max-width: 480px;
@@ -98,6 +98,9 @@
 
 .quote {
     min-height: 32px;
+    @media (max-width: 768px) {
+            max-width: 300px;
+        }
 }
 
 .author {
